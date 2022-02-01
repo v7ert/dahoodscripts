@@ -1,0 +1,13 @@
+noclip = false
+game:GetService("RunService").Stepped:connect(function()
+	if noclip then
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	end
+end)
+game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(k)
+		if k == "k" then
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+end)
